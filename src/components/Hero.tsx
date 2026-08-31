@@ -29,7 +29,7 @@ const Hero = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        className="flex-[1.2] w-full h-[400px] lg:h-[600px] relative"
+        className="flex-[1.2] w-full h-[300px] md:h-[400px] lg:h-[600px] relative mt-8 lg:mt-0"
       >
         <div className="absolute inset-0 bg-brand-border rounded-[40px] overflow-hidden shadow-xl">
           <img src="/hero-image.jpg" alt="Embroidery Machine" className="w-full h-full object-cover" />

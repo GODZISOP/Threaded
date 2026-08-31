@@ -6,10 +6,11 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full py-4 lg:py-6 px-6 md:px-12 flex items-center justify-between sticky top-0 bg-brand-bg/90 backdrop-blur-sm z-50 border-b border-brand-border">
-      <div className="flex items-center gap-2">
-        <a href="#home" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
-          <img src={logoImage} alt="Threaded Logo" className="h-14 md:h-16 w-auto object-contain mix-blend-multiply" />
+    <header className="w-full pt-6 pb-4 lg:pt-8 lg:pb-4 px-6 md:px-12 flex items-center justify-between sticky top-0 bg-brand-bg/90 backdrop-blur-sm z-50">
+      {/* Spacer div for logo to maintain flex layout */}
+      <div className="w-24 md:w-32 flex-shrink-0 relative">
+        <a href="#home" className="absolute -top-6 md:-top-8 left-0 z-50" onClick={() => setIsMobileMenuOpen(false)}>
+          <img src={logoImage} alt="Threaded Logo" className="h-24 md:h-32 w-auto object-contain mix-blend-multiply drop-shadow-sm" />
         </a>
       </div>
       
@@ -56,7 +57,7 @@ const Header = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-brand-bg border-b border-brand-border shadow-lg lg:hidden flex flex-col p-6 gap-6"
+            className="absolute top-full left-0 w-full bg-brand-bg border-b border-brand-border shadow-xl z-40 lg:hidden flex flex-col p-6 gap-6"
           >
             <nav className="flex flex-col gap-6 text-lg tracking-wide font-medium text-brand-primary">
               <a href="#home" className="hover:text-brand-accent transition-colors border-b border-brand-border/50 pb-2" onClick={() => setIsMobileMenuOpen(false)}>HOME</a>

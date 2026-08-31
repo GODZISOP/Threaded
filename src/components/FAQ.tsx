@@ -25,7 +25,7 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 px-8 md:px-12 lg:px-24 overflow-hidden">
+    <section id="faq" className="py-16 lg:py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
         
         {/* Left Column: FAQ Accordion */}
@@ -36,7 +36,7 @@ const FAQ = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex-1 space-y-8"
         >
-          <h2 className="font-serif text-4xl text-brand-primary">Frequently Asked Questions</h2>
+          <h2 className="font-serif text-3xl md:text-4xl text-brand-primary">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="border-b border-brand-border pb-4">
@@ -44,11 +44,11 @@ const FAQ = () => {
                   className="w-full flex items-center justify-between text-left py-4 focus:outline-none"
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 >
-                  <span className="font-serif text-xl font-medium text-brand-primary">{faq.q}</span>
-                  <ChevronDown className={`transform transition-transform duration-300 text-brand-accent ${openIndex === index ? 'rotate-180' : ''}`} />
+                  <span className="font-serif text-lg md:text-xl font-medium text-brand-primary pr-4">{faq.q}</span>
+                  <ChevronDown className={`transform transition-transform duration-300 text-brand-accent flex-shrink-0 ${openIndex === index ? 'rotate-180' : ''}`} />
                 </button>
-                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                  <p className="text-brand-muted pb-4 leading-relaxed">{faq.a}</p>
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-brand-muted pb-4 leading-relaxed text-sm md:text-base">{faq.a}</p>
                 </div>
               </div>
             ))}
@@ -64,23 +64,23 @@ const FAQ = () => {
           className="flex-1 space-y-8" 
           id="contact"
         >
-          <h2 className="font-serif text-4xl text-brand-primary">Let's stay connected</h2>
-          <p className="text-brand-muted text-lg">Follow along on social media to see behind the scenes and recent projects.</p>
+          <h2 className="font-serif text-3xl md:text-4xl text-brand-primary">Let's stay connected</h2>
+          <p className="text-brand-muted text-base md:text-lg">Follow along on social media to see behind the scenes and recent projects.</p>
           
-          <div className="flex gap-4">
-            <a href="#" className="flex items-center gap-2 bg-white border border-brand-border px-6 py-3 rounded-full hover:border-brand-accent transition-colors text-brand-primary">
+          <div className="flex flex-wrap gap-4">
+            <a href="#" className="flex items-center justify-center gap-2 bg-white border border-brand-border px-6 py-3 rounded-full hover:border-brand-accent transition-colors text-brand-primary w-full sm:w-auto">
               <Camera size={20} /> Instagram
             </a>
-            <a href="mailto:hello@example.com" className="flex items-center gap-2 bg-white border border-brand-border px-6 py-3 rounded-full hover:border-brand-accent transition-colors text-brand-primary">
+            <a href="mailto:hello@example.com" className="flex items-center justify-center gap-2 bg-white border border-brand-border px-6 py-3 rounded-full hover:border-brand-accent transition-colors text-brand-primary w-full sm:w-auto">
               <Mail size={20} /> Email me
             </a>
           </div>
 
-          <div className="flex gap-4 h-[400px]">
+          <div className="flex gap-4 h-[250px] md:h-[400px]">
             <div className="w-1/2 h-full rounded-2xl overflow-hidden flex-shrink-0 relative bg-brand-border/50">
                <img src="/work-1.png" alt="Custom Blanket" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
-            <div className="w-1/2 h-full rounded-2xl overflow-hidden flex-shrink-0 relative mt-12 bg-brand-border/50">
+            <div className="w-1/2 h-full rounded-2xl overflow-hidden flex-shrink-0 relative mt-6 md:mt-12 bg-brand-border/50">
                <img src="/insta-bag.png" alt="Custom Embroidered Bags" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
           </div>

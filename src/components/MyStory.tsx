@@ -24,7 +24,7 @@ const MyStory = () => {
           className="flex-1 space-y-8"
         >
           <h2 className="text-sm tracking-[0.2em] uppercase font-bold text-brand-accent">My Story</h2>
-          <div className="relative w-full h-[500px] rounded-tl-[80px] rounded-br-[80px] overflow-hidden bg-brand-border">
+          <div className="relative w-full h-[350px] md:h-[500px] rounded-tl-[80px] rounded-br-[80px] overflow-hidden bg-brand-border">
              <img src="/liz-portrait.jpg" alt="Liz - Founder of Threaded" className="w-full h-full object-cover object-[center_top]" />
           </div>
           <div className="space-y-6 text-brand-primary">
