@@ -1,5 +1,3 @@
-
-import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const Hero = () => {
