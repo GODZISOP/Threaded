@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #4B362F;
+  --color-brand-accent: #9D635B;
+  --color-brand-muted: #8E766D;
+  --color-brand-bg: #F4EFEA;
+  --color-brand-border: #E2D9D2;
+  --color-brand-card: #FFFFFF;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-script: "Caveat", cursive;
+}
+
+body {
+  @apply bg-brand-bg text-brand-primary font-sans antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
