@@ -5,7 +5,7 @@ const Header = () => {
     <header className="w-full py-6 px-8 md:px-12 flex items-center justify-between sticky top-0 bg-brand-bg/90 backdrop-blur-sm z-50 border-b border-brand-border">
       <div className="flex items-center gap-2">
         <a href="#home" className="flex items-center">
-          <img src={logoImage} alt="Threaded Logo" className="h-20 md:h-24 w-auto object-contain rounded-2xl shadow-sm" />
+          <img src={logoImage} alt="Threaded Logo" className="h-14 md:h-16 w-auto object-contain mix-blend-multiply" />
         </a>
       </div>
       
